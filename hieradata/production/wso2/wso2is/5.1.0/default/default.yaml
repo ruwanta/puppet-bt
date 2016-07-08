@@ -37,7 +37,7 @@ wso2::template_list:
 #     https: 443
 
 #wso2::file_list:
-#  - "repository/components/lib/%{hiera('wso2::datasources::mysql::connector_jar')}"
+  - "repository/components/lib/%{hiera('wso2::datasources::mysql::connector_jar')}"
 
 wso2::clustering:
   enabled: false
@@ -54,7 +54,7 @@ wso2::clustering:
         hostname: 192.168.100.20
         port: 4000
 
- wso2::registry_mounts:
+wso2::registry_mounts:
    wso2_config_db:
      path: /_system/config
      target_path: /_system/config/is
@@ -78,8 +78,8 @@ wso2::master_datasources:
      description: The datasource used for config registry
      driver_class_name: "%{hiera('wso2::datasources::mysql::driver_class_name')}"
      url: jdbc:mysql://localhost:3306/WSO2REG_IS_DB?autoReconnect=true
-     username: "%{hiera('wso2::datasources::common::username')}"
-     password: "%{hiera('wso2::datasources::common::password')}"
+     username: "%{hiera('wso2::datasources::mysql::username')}"
+     password: "%{hiera('wso2::datasources::mysql::password')}"
      jndi_config: jdbc/WSO2_CONFIG_DB
      max_active: "%{hiera('wso2::datasources::common::max_active')}"
      max_wait: "%{hiera('wso2::datasources::common::max_wait')}"

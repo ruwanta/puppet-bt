@@ -16,7 +16,7 @@
 
 # Manages WSO2 Identity Server deployment
 class wso2is inherits wso2base {
-  $am_datasources       = hiera('wso2::am_datasources')
+#  $am_datasources       = hiera('wso2::am_datasources')
   $bps_datasources      = hiera('wso2::bps_datasources')
   $metrics_datasources  = hiera('wso2::metrics_datasources')
   $is_datasource        = hiera('wso2::is_datasource')

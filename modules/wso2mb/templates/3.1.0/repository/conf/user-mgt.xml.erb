@@ -166,7 +166,7 @@
         -->
         <UserStoreManager class="org.wso2.carbon.user.core.ldap.ReadWriteLDAPUserStoreManager">
             <Property name="TenantManager">org.wso2.carbon.user.core.tenant.CommonHybridLDAPTenantManager</Property>
-            <Property name="ConnectionURL">ldap://localhost:<%= @ports['ldap_port'] %></Property>
+            <Property name="ConnectionURL">ldap://localhost:${Ports.EmbeddedLDAP.LDAPServerPort}</Property>
             <Property name="ConnectionName">uid=admin,ou=system</Property>
             <Property name="ConnectionPassword">admin</Property>
             <Property name="UserSearchBase">ou=Users,dc=wso2,dc=org</Property>
@@ -193,7 +193,7 @@
             <Property name="RolenameJavaRegEx">[a-zA-Z0-9._-|//]{3,30}$</Property>
             <Property name="RolenameJavaScriptRegEx">^[\S]{3,30}$</Property>
             <Property name="SCIMEnabled">true</Property>
-            <Property name="IsBulkImportSupported">true</Property>
+            <Property name="IsBulkImportSupported">false</Property>
             <Property name="EmptyRolesAllowed">true</Property>
             <Property name="PasswordHashMethod">PLAIN_TEXT</Property>
             <Property name="MultiAttributeSeparator">,</Property>

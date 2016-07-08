@@ -52,7 +52,7 @@ class wso2base {
   $local_reg_datasource = hiera('wso2::local_reg_datasource')
   $clustering           = hiera('wso2::clustering')
   $dep_sync             = hiera('wso2::dep_sync')
-  $ports                = hiera('wso2::ports')
+  $ports                = hiera_hash('wso2::ports')
   $jvm                  = hiera('wso2::jvm')
   $ipaddress            = hiera('wso2::ipaddress')
   $fqdn                 = hiera('wso2::fqdn')

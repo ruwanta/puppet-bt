@@ -13,8 +13,8 @@
 # limitations under the License.
 
 ---
-java_install_dir: /mnt/jdk-7u80
-java_source_file: jdk-7u80-linux-x64.tar.gz
+java_install_dir: /mnt/jdk-8u45
+java_source_file: jdk-8u45-linux-x64.tar.gz
 
 # symlink to Java install directory
 java_home: /opt/java

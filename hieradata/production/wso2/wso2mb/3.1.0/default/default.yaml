@@ -43,10 +43,10 @@ wso2::master_datasources:
   wso2_mb_store_db:
     name: WSO2_MB_STORE_DB
     description: The datasource used for message broker database
-    driver_class_name: "%{hiera('wso2::datasources::h2::driver_class_name')}"
-    url: jdbc:h2:repository/database/WSO2MB_STORE_DB;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000
-    username: "%{hiera('wso2::datasources::common::username')}"
-    password: "%{hiera('wso2::datasources::common::password')}"
+    driver_class_name: "%{hiera('wso2::datasources::mysql::driver_class_name')}"
+    url: jdbc:mysql://localhost:3306/WSO2MB_STORE_DB?autoReconnect=true
+    username: "%{hiera('wso2::datasources::mysql::username')}"
+    password: "%{hiera('wso2::datasources::mysql::password')}"
     jndi_config: WSO2MBStoreDB
     max_active: "%{hiera('wso2::datasources::common::max_active')}"
     max_wait: "%{hiera('wso2::datasources::common::max_wait')}"

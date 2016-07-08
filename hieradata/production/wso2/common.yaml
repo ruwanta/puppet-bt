@@ -60,7 +60,7 @@ wso2::system_file_list: []
 # JVM settings
 wso2::jvm:
     xms: 256m
-    xmx: 1024m
+    xmx: 2048m
     max_perm_size: 256m
 
 # Server ports configuration
@@ -107,8 +107,8 @@ packages:
   - zip
   - unzip
 
-# User management datasource defaults to local h2 db
-wso2::usermgt_datasource: wso2_carbon_db
+# User management datasource
+wso2::usermgt_datasource: wso2user_db
 
 # Override this value if the Local registry space is mounted to a remote
 wso2::local_reg_datasource: wso2_carbon_db
